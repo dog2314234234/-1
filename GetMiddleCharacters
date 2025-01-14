@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp
+{
+    internal class Program
+    {
+        public static string GetMiddleCharacters(string str)
+        {
+            int length = str.Length;
+
+            if (length % 2 != 0)
+            {
+                return str[length / 2].ToString();
+            }
+
+            else
+            {
+                return str.Substring(length / 2 - 1, 2);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(GetMiddleCharacters("hello")); 
+            Console.WriteLine(GetMiddleCharacters("worlds")); 
+        }
+    }
+}
