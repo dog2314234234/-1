@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        public static void IsMysteryNumber(int number)
+        {
+            if (number % 3 != 0)
+            {
+                Console.WriteLine("false");
+                return;
+            }
+
+            string numberString = Math.Abs(number).ToString();
+            if (numberString.Contains('3'))
+            {
+                Console.WriteLine("false");
+                return;
+            }
+
+            Console.WriteLine("true");
+            return;
+        }
+        static void Main(string[] args)
+        {
+            IsMysteryNumber(12);
+        }
+    }
+}
